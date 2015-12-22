@@ -58,7 +58,7 @@ inherits sshd::params {
     notify  => Service[$service],
   }
     
-  file {$sshd_config_banner_file:
+  file {$sshd_config_bannerfile:
     ensure => file,
     path   => $sshd_config_banner_file,
     mode   => '0644',
