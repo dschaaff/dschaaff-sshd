@@ -41,9 +41,8 @@ RhostsRSAAuthentication <%= sshd_config_rhosts_rsa_auth %>
 HostbasedAuthentication <%= @sshd_config_host_based_auth %>
 # Uncomment if you don't trust ~/.ssh/known_hosts for RhostsRSAAuthentication
 #IgnoreUserKnownHosts yes
-<% if @sshd_config_ignore_user_known_hosts == yes -%>
-IgnoreUserKnownHosts yes
-<% end -%>
+IgnoreUserKnownHosts <%= @sshd_config_ignore_user_known_hosts %>
+
 # To enable empty passwords, change to yes (NOT RECOMMENDED)
 PermitEmptyPasswords <%= @sshd_config_permit_empty_passwords %>
 
