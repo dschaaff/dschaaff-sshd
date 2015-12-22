@@ -49,7 +49,7 @@ inherits sshd::params {
   }
 
   file { '/etc/ssh/sshd_config':
-    source  => template('sshd/sshd_config.erb'),
+    content  => template('sshd/sshd_config.erb'),
     mode    => '0600',
     owner   => 'root',
     group   => 'root',
