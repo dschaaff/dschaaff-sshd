@@ -1,6 +1,7 @@
 # configure sshd
 class sshd(
   $package                             = $sshd::params::package,
+  $service                             = $sshd::params::service,
   $manage_firewall                     = $sshd::params::manage_firewall,
   $sshd_config_port                    = $sshd::params::sshd_config_port,
   $sshd_config_listen_address          = $sshd::params::sshd_config_listen_address,
@@ -57,13 +58,13 @@ inherits sshd::params {
     notify  => Service[$service],
   }
     
-  file {$banner_file:
+  file {$sshd_config_banner_file:
     ensure => file,
-    path   => $banner_file,
+    path   => $sshd_config_banner_file,
     mode   => '0644',
     owner  => 'root',
     group  => 'root',
-    source => $banner_source,
+    source => $sshd_config_bannersource,
     }
 
   service { $service:
