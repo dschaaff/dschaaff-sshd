@@ -1,7 +1,7 @@
 # configure sshd
 class sshd(
-  $package         = $sshd::params::package,
-  $manage_firewall = $sshd::params::manage_firewall,
+  $package                             = $sshd::params::package,
+  $manage_firewall                     = $sshd::params::manage_firewall,
   $sshd_config_port                    = $sshd::params::sshd_config_port,
   $sshd_config_listen_address          = $sshd::params::sshd_config_listen_address,
   $sshd_config_rsa_key_location        = $sshd::params::sshd_config_rsa_key_location,
