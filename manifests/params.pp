@@ -1,5 +1,4 @@
 class sshd::params {
-  $source_base                         = "puppet:///modules/${module_name}/"
   $manage_firewall                     = hiera('sshd::manage_firewall', false)
   $sshd_config_port                    = hiera('sshd::sshd_config_port','22')
   $sshd_config_listen_address          = hiera('sshd::sshd_config_listen_address', '0.0.0.0')
