@@ -43,7 +43,7 @@ HostbasedAuthentication <%= @sshd_config_host_based_auth %>
 #IgnoreUserKnownHosts yes
 <% if @sshd_config_ignore_user_known_hosts == yes -%>
 IgnoreUserKnownHosts yes
-<% end %>
+<% end -%>
 # To enable empty passwords, change to yes (NOT RECOMMENDED)
 PermitEmptyPasswords <%= @sshd_config_permit_empty_passwords %>
 
