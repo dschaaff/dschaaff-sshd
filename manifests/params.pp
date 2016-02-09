@@ -1,4 +1,5 @@
 class sshd::params {
+  $ensure                              = hiera('sshd::ensure', present)
   $manage_firewall                     = hiera('sshd::manage_firewall', false)
   $sshd_config_port                    = hiera('sshd::sshd_config_port','22')
   $sshd_config_listen_address          = hiera('sshd::sshd_config_listen_address', '0.0.0.0')

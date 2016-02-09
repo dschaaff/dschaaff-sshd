@@ -1,6 +1,7 @@
 # configure sshd
 class sshd(
   $package                             = $sshd::params::package,
+  $ensure                              = $sshd::params::ensure,
   $service                             = $sshd::params::service,
   $manage_firewall                     = $sshd::params::manage_firewall,
   $sshd_config_port                    = $sshd::params::sshd_config_port,
@@ -46,7 +47,7 @@ inherits sshd::params {
   }
 
   package { $package:
-    ensure => 'installed',
+    ensure => $ensure,
   }
 
   file { '/etc/ssh/sshd_config':
