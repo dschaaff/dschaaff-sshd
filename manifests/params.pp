@@ -21,6 +21,7 @@ class sshd::params {
   $sshd_config_ignore_user_known_hosts = hiera('sshd::sshd_config_ignore_user_known_hosts', 'no')
   $sshd_config_permit_emptypasswords   = hiera('sshd:sshd_config_permit_emptypasswords', 'no')
   $sshd_config_challenge_response_auth = hiera('sshd::sshd_config_challenge_response_auth', 'no')
+  $sshd_config_kbd_interactive_auth    = hiera('sshd::sshd_config_kbd_interactive_auth', 'no')
   $sshd_config_x11forwarding           = hiera('sshd::sshd_config_x11forwarding', 'yes')
   $sshd_config_printmotd               = hiera('sshd::sshd_config_printmotd', 'yes')
   $sshd_config_printlastlog            = hiera('sshd::sshd_config_printlastlog', 'yes')

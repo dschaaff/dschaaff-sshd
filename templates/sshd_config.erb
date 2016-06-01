@@ -1,4 +1,4 @@
-# Package generated configuration file
+ # Package generated configuration file
 # See the sshd_config(5) manpage for details
 
 # What ports, IPs and protocols we listen for
@@ -49,6 +49,9 @@ PermitEmptyPasswords <%= @sshd_config_permit_emptypasswords %>
 # Change to yes to enable challenge-response passwords (beware issues with
 # some PAM modules and threads)
 ChallengeResponseAuthentication <%= @sshd_config_challenge_response_auth %>
+
+# keyboard interactive logon
+KbdInteractiveAuthentication <%= @sshd_config_kbd_interactive_auth %>
 
 # Change to no to disable tunnelled clear text passwords
 #PasswordAuthentication yes
