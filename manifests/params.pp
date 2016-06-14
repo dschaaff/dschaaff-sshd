@@ -31,12 +31,12 @@ class sshd::params {
   $sshd_config_usepam                  = hiera('sshd::sshd_config_usepam', 'yes')
   $sshd_export_keys                    = hiera('sshd::sshd_export_keys', false)
   case $::osfamily {
-    Debian: {
+    'Debian': {
       $package        = 'openssh-server'
       $service        = 'ssh'
       $config_file    = '/etc/ssh/sshd_config'
     }
-    RedHat: {
+    'RedHat': {
       $package        = 'openssh-server'
       $service        = 'sshd'
       $config_file    = '/etc/ssh/sshd_config'
