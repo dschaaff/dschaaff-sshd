@@ -17,7 +17,7 @@ HostKey <%= @sshd_config_ed25519_key_location %>
 UsePrivilegeSeparation yes
 
 # Lifetime and size of ephemeral version 1 server key
-KeyRegenerationInterval <%= @sshd_config_KeyRegenerationInterval %>
+KeyRegenerationInterval <%= @sshd_config_key_regeneration_interval %>
 ServerKeyBits <%= @sshd_config_ephemeral_key_bits %>
 
 # Logging
