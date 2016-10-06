@@ -58,10 +58,10 @@ inherits sshd::params {
     require => Package[$package],
     notify  => Service[$service],
   }
-    
+
   file {$sshd_config_bannerfile:
     ensure => file,
-    path   => $sshd_config_banner_file,
+    path   => $sshd_config_bannerfile,
     mode   => '0644',
     owner  => 'root',
     group  => 'root',
